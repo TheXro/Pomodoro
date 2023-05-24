@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">pomodoro</div>
+      <div class="type">
+        <button>pomodoro</button>
+        <button>short break</button>
+        <button>long break</button>
+      </div>
+
+      <div class="pomodoro">
+        <div class="wrapper">
+          <div class="time">25:00</div>
+          <div class="pause">PAUSE</div>
+        </div>
+      </div>
+      <div class="settingsModal hidden">
+        <div class="top">
+          <span class="h1">Settings</span>
+          <span class="h1 X" style="float: right">X</span>
+          <br />
+        </div>
+        <div class="timeSelect">
+          <span class="headtime"> T I M E ( M I N U T E S ) </span>
+          <div class="timeItemWrapper flexr">
+            <div class="timeSelectItem flexc">
+              <span class="lessop">pomodoro</span
+              ><input type="number" min="1" max="60" />
+            </div>
+            <div class="timeSelectItem flexc">
+              <span class="lessop">short break</span
+              ><input type="number" min="1" max="60" />
+            </div>
+            <div class="timeSelectItem flexc">
+              <span class="lessop">long break</span
+              ><input type="number" min="1" max="60" />
+            </div>
+          </div>
+        </div>
+        <div class="fontChange flexr">
+          <span class="headtime"> F O N T </span>
+          <div class="fontItemWrapper flexr">
+            <div class="fontItem">
+              <span class="f1 fnt">Aa</span>
+            </div>
+            <div class="fontItem">
+              <span class="f2 fnt">Aa</span>
+            </div>
+            <div class="fontItem">
+              <span class="f3 fnt">Aa</span>
+            </div>
+          </div>
+        </div>
+        <div class="colorChange flexr">
+          <span class="headtime"> C O L O R </span>
+          <div class="colorItemWrapper flexr">
+            <div class="colorItem">
+              <span class="color1 fnt">Rd</span>
+            </div>
+            <div class="colorItem">
+              <span class="color2 fnt">Gg</span>
+            </div>
+            <div class="colorItem">
+              <span class="color3 fnt">Bb</span>
+            </div>
+          </div>
+        </div>
+        <div class="apply">
+          <button>Apply</button>
+        </div>
+      </div>
+      <div class="settings">
+        <div class="settings-head">
+          <img
+            src="https://img.icons8.com/?size=512&id=83214&format=png"
+            alt=""
+            width="40px"
+            height="40px"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
