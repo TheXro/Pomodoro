@@ -96,11 +96,8 @@ img:hover {
   font-weight: 700;
 }
 .settingsModal{
-  /* display: none; */
-  /* font-size : 2rem; */
   font-weight: 600;
   padding: 1.75rem 3.5rem;
-  /* margin: 5rem 2rem; */
   width: 500px;
   background-color: #fff;
   color: #444;
@@ -129,7 +126,6 @@ img:hover {
 }
 .timeSelectItem{
   display: inline;
-  /* border-bottom: 1px solid #000; */
 }
 .flexc{
   display: flex;
@@ -146,7 +142,6 @@ img:hover {
 span{
   font-size: 12px;
   margin-bottom: 3px;
-  /* opacity: .5; */
 }
 .lessop{
   opacity: .7;
@@ -197,10 +192,6 @@ input {
   margin-top: 20px;
   margin-bottom: -25px;
  }
- /* .colorItem{
-  margin: 15px;
-  padding: 10px;
- } */
 .color1{
   background-color: red;
 }
@@ -229,7 +220,6 @@ input {
   background-color: rgb(187, 176, 176);
   font-weight: 800;
  }
-
 
 /* responsiveness */
 @media screen and (max-width: 768px) {
