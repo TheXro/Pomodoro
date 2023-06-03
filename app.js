@@ -16,8 +16,6 @@ const closeModal = function () {
     overlay.classList.add('hidden');
 };
 overlay.addEventListener('click', closeModal);
+close.addEventListener('click', closeModal);
+settings.addEventListener('click', openModal);
 
-settings.addEventListener('click', openModal)
-
-close.addEventListener('click', closeModal)
-// settings.classList.add('hidden'); 
