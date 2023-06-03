@@ -258,4 +258,7 @@ input {
   .pause {
     font-size: 0.8em;
   }
+  .settingsModal{
+    scale: .9;
+  }
 }
