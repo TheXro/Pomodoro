@@ -19,3 +19,6 @@ overlay.addEventListener('click', closeModal);
 close.addEventListener('click', closeModal);
 settings.addEventListener('click', openModal);
 
+//timer function
+const time = document.querySelector('.time');
+const pause = document.querySelector('.pause');
