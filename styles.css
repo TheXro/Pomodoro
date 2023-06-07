@@ -88,12 +88,21 @@ img:hover {
   font-family: "Poppins", sans-serif;
   margin: 0 auto;
   font-weight: 800;
+  cursor: pointer;
 }
 .pause {
   letter-spacing: 10px;
   color: aqua;
   font-size: 1em;
   font-weight: 700;
+  /* cursor: pointer; */
+  cursor: default;
+  background: rgb(13, 8, 54);
+  border-radius: 50px;
+}
+.pause:hover {
+  background: #ca6969cd;
+  color: rgb(12, 25, 83);
 }
 .settingsModal{
   /* display: none; */
