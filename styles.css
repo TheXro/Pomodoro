@@ -72,7 +72,7 @@ button {
 }
 
 button:hover {
-  background: #ca6969cd;
+  background: var(--button-bg);
   color: rgb(12, 25, 83);
 }
 img {
@@ -101,7 +101,7 @@ img:hover {
   border-radius: 50px;
 }
 .pause:hover {
-  background: #ca6969cd;
+  background: var(--button-bg);
   color: rgb(12, 25, 83);
 }
 .settingsModal{
@@ -196,7 +196,7 @@ input {
  }
 
  .fnt:hover{
-  background-color: #ca6969cd;
+  background-color: var(--button-bg);
   cursor: pointer;
  }
 .hidden{
@@ -229,12 +229,12 @@ input {
   transform: translateY(60px);
  }
  .apply button{
-  background-color: #ca6969fb;
+  background-color: var(--button-bg);
   color: whitesmoke;
   font-weight: 800;
  }
  .apply button:hover{
-  color: #ca6969fb;
+  color: var(--button-bg-apply);
   background-color: rgb(187, 176, 176);
   font-weight: 800;
  }
@@ -280,4 +280,11 @@ input {
   .settingsModal{
     scale: .85;
   }
+}
+
+
+
+
+.co{
+  color: #1f3b77df 59%, 29%, 0.875);
 }

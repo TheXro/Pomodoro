@@ -18,7 +18,7 @@ const closeModal = function () {
 overlay.addEventListener('click', closeModal);
 close.addEventListener('click', closeModal);
 settings.addEventListener('click', openModal);
-
+ 
 //timer function
 const time = document.querySelector('.time');
 const pause = document.querySelector('.pause');
@@ -33,6 +33,32 @@ applybtn.addEventListener('click', function () {
     console.log('Button Clicked');
     time.textContent = pmdr.value + ':' + '00';
     closeModal();
+}
+)
+
+
+
+
+// changing the colors 
+function toggleColorMode(color) {
+    document.documentElement.style.setProperty('--button-bg', color );
+}
+toggleColorMode('#c6996f'); 
+
+const color1 = document.querySelector('.color1');
+const color2 = document.querySelector('.color2');
+const color3 = document.querySelector('.color3');
+
+color1.addEventListener('click', function () {
+    toggleColorMode('#c6996f');
+}
+)
+color2.addEventListener('click', function () {
+    toggleColorMode('#f5f96f');
+}
+)
+color3.addEventListener('click', function () {
+    toggleColorMode('#1f3b77');
 }
 )
 
