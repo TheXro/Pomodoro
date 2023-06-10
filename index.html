@@ -19,7 +19,7 @@
 
       <div class="pomodoro">
         <div class="wrapper">
-          <div class="time">00:00</div>
+          <div class="time" id="pmdr">00:00</div>
           <div class="pause">PAUSE</div>
         </div>
       </div>
@@ -34,15 +34,15 @@
           <div class="timeItemWrapper flexr">
             <div class="timeSelectItem flexc">
               <span class="lessop">pomodoro</span
-              ><input type="number" min="1" max="60" />
+              ><input type="number" min="1" max="60" class="pmdr" />
             </div>
             <div class="timeSelectItem flexc">
               <span class="lessop">short break</span
-              ><input type="number" min="1" max="60" />
+              ><input type="number" min="1" max="60" class="shrtbrk"/>
             </div>
             <div class="timeSelectItem flexc">
               <span class="lessop">long break</span
-              ><input type="number" min="1" max="60" />
+              ><input type="number" min="1" max="60" class="lngbrk"/>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@
           </div>
         </div>
         <div class="apply">
-          <button>Apply</button>
+          <button class="applybtn">Apply</button>
         </div>
       </div>
       <div class="settings">
