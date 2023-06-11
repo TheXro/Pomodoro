@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* font-family: "Josefin Sans", sans-serif; */
 }
 .container {
   width: 100vw;
@@ -17,8 +21,8 @@
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: #190c49;
-  box-shadow: 21px 21px 36px #0e072a, -21px -21px 36px #241168;
+  background:var(--bg-color);
+  box-shadow: 21px 21px 36px var(--bg-shadow-1), -21px -21px 36px var(--bg-shadow-2);
   text-align: center;
   display: flex;
   justify-content: center;
@@ -27,7 +31,7 @@
   z-index: 1;
 }
 .pomodoro::after {
-  background-color: #0e072ad9;
+  background-color: var(--bg-color-after);
   content: "";
   width: 350px;
   height: 350px;
@@ -37,43 +41,43 @@
 }
 
 .head {
-  color: aqua;
+  color: var(--font-color);
   font-size: 50px;
-  font-family: "Poppins", Courier, monospace;
   margin-bottom: 50px;
   font-weight: 800;
 }
 body {
-  background-color: #190c49;
+  background-color:var(--bg-color);
   padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
   position: relative; 
+  font-family: var(--font-family);
 }
 .type {
-  color: aqua;
+  color: var(--font-color);;
   font-weight: 800;
-  background: rgb(13, 8, 54);
+  background: var(--bg-changer);
   border-radius: 50px;
+  font-family: var(--font-family);
 }
 button {
   width: 150px;
   height: 60px;
   margin: 5px;
-  color: #666c84ab;
+  color: #ffffffab;
   border: 3px solid #001f8f00;
   border-radius: 45px;
   transition: all 0.3s;
   cursor: pointer;
-  background: rgb(13, 8, 54);
+  background: var(--bg-buttons);
   font-size: 1em;
   font-weight: 550;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family);
 }
 
 button:hover {
   background: var(--button-bg);
-  color: rgb(12, 25, 83);
+  color: #0f290e83;
 }
 img {
   opacity: 0.4;
@@ -83,21 +87,19 @@ img:hover {
   cursor: pointer;
 }
 .time {
-  color: aqua;
+  color: var(--font-color);
   font-size: 5em;
-  font-family: "Poppins", sans-serif;
   margin: 0 auto;
   font-weight: 800;
   cursor: pointer;
 }
 .pause {
   letter-spacing: 10px;
-  color: aqua;
+  color: var(--font-color);
   font-size: 1em;
   font-weight: 700;
-  /* cursor: pointer; */
   cursor: default;
-  background: rgb(13, 8, 54);
+  background: var(--bg-buttons);
   border-radius: 50px;
 }
 .pause:hover {
@@ -105,18 +107,17 @@ img:hover {
   color: rgb(12, 25, 83);
 }
 .settingsModal{
-  /* display: none; */
-  /* font-size : 2rem; */
   font-weight: 600;
   padding: 1.75rem 3.5rem;
-  /* margin: 5rem 2rem; */
   width: 500px;
-  background-color: #fff;
-  color: #444;
+  background-color: #ffffff33;
+  color: #000000ba;
   border-radius: 30px;
   position: absolute;
   top: 50;
   z-index: 99;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
 }
 .top{
   border-bottom: 1px solid #00000030;
@@ -138,7 +139,6 @@ img:hover {
 }
 .timeSelectItem{
   display: inline;
-  /* border-bottom: 1px solid #000; */
 }
 .flexc{
   display: flex;
@@ -155,7 +155,6 @@ img:hover {
 span{
   font-size: 12px;
   margin-bottom: 3px;
-  /* opacity: .5; */
 }
 .lessop{
   opacity: .7;
@@ -169,7 +168,7 @@ input {
   font-weight: bold;
   width: 110px;
   outline: none;
-  opacity: .8;
+  opacity: .6;
  }
  .X{
   font-size: 20px;
@@ -185,13 +184,17 @@ input {
   border-bottom: 1px solid #0000002c;
 }
  .fnt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 15px;
   border-radius: 50%;
   padding: 10px;
   cursor: pointer;
   color: rgb(255, 255, 255);
   background-color: #000;
-  font-size: 15px;
+  width: 40px;
+  height: 40px;
 
  }
 
@@ -199,6 +202,15 @@ input {
   background-color: var(--button-bg);
   cursor: pointer;
  }
+ .f1{
+  font-family: 'Poppins', sans-serif;
+ }
+  .f2{
+    font-family: 'Bungee', sans-serif;
+  }
+  .f3{
+    font-family: 'Josefin Sans', sans-serif;
+  }
 .hidden{
   display: none;
 }
@@ -206,10 +218,6 @@ input {
   margin-top: 20px;
   margin-bottom: -25px;
  }
- /* .colorItem{
-  margin: 15px;
-  padding: 10px;
- } */
 .color1{
   background-color: red;
 }
@@ -244,7 +252,7 @@ input {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(1, 1, 1, 0.114);
   backdrop-filter: blur(3px);
   z-index: 5;
 }
