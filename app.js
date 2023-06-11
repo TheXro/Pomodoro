@@ -10,6 +10,14 @@ const openModal = function () {
 
 };
 
+//for closing the modal when esc key is pressed
+addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !settingsModal.classList.contains('hidden')) {
+        closeModal();
+    }
+}
+)
+//closing the modal
 const closeModal = function () {
     console.log('Button Clicked');
     settingsModal.classList.add('hidden');
