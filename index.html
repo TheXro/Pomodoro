@@ -12,14 +12,14 @@
     <div class="container">
       <div class="head">pomodoro</div>
       <div class="type">
-        <button class="blue">pomodoro</button>
-        <button>short break</button>
-        <button>long break</button>
+        <button class="blue" type="radio">pomodoro</button>
+        <button type="radio">short break</button>
+        <button type="radio">long break</button>
       </div>
 
       <div class="pomodoro">
         <div class="wrapper">
-          <div class="time" id="pmdr">00:00</div>
+          <div class="time" id="pomodo">25:00</div>
           <div class="pause">PAUSE</div>
         </div>
       </div>
@@ -90,5 +90,17 @@
       </div>
     </div>
     <script src="app.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(function(registration) {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch(function(error) {
+            console.error('Service Worker registration failed:', error);
+          });
+      }
+    </script>
+    
   </body>
 </html>
