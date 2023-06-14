@@ -94,6 +94,7 @@ img:hover {
   cursor: pointer;
 }
 .pause {
+  padding: 5px;
   letter-spacing: 10px;
   color: var(--font-color);
   font-size: 1em;
