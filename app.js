@@ -37,16 +37,7 @@ const pmdr = document.querySelector('.pmdr');
 const shtbrk = document.querySelector('.shrtbrk');
 const lngbrk = document.querySelector('.lngbrk');
 const applybtn = document.querySelector('.applybtn');
-applybtn.addEventListener('click', function () {
-    console.log('Button Clicked');
-    time.textContent = pmdr.value + ':' + '00';
-    closeModal();
-}
-)
-
-
-
-
+time.textContent = pmdr.value + ':' + '00';
 // changing the colors and font
 function btnColorChange(color) {
     document.documentElement.style.setProperty('--button-bg', color );
@@ -113,3 +104,42 @@ fnt[2].addEventListener('click', function () {
     document.documentElement.style.setProperty('--font-family', 'Josefin Sans');
 }
 )
+
+
+//timer function 
+let stop = true;
+const startTime = function () {
+    const [min, sec] = time.textContent.split(':');
+    stop = false;
+    // console.log(min, sec);
+    if (sec == 0) {
+        if (min == 0) {
+            clearInterval(timer);
+            time.textContent = '00:00';
+            return;
+        }
+        time.textContent = `${min - 1}:59`;
+        return;
+    }
+    time.textContent = `${min}:${sec - 1}`;
+}
+pause.addEventListener('click', function () {
+    clearInterval(timer);
+}
+)
+applybtn.addEventListener('click', function () {
+    console.log('Button Clicked');
+    time.textContent = pmdr.value + ':' + '00';
+    if (stop == false) {
+        clearInterval(timer);
+        timer = setInterval(startTime, 1000);
+    }
+    else { 
+    timer = setInterval(startTime, 1000)
+    stop = false;
+}
+    closeModal();
+}
+)
+
+
